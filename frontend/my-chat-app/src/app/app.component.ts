@@ -30,7 +30,7 @@ export class AppComponent {
     };
     this.conversation.push(userMessage);
 
-    this.http.post('http://localhost:5000/chat', { content: this.newMessageContent })
+    this.http.post('https://chat-bot-9r9a.onrender.com/chat', { content: this.newMessageContent })
       .subscribe((data: any) => {
         const botMessage: Message = {
           content: data.message,
